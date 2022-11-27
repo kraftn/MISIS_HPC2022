@@ -14,7 +14,7 @@ mpirun --allow-run-as-root -n 4 python task2.py image --automaton_rule 60 --peri
 
 Вычислить среднее время работы программы для заданного количества процессов:
 ```bash
-mpirun --allow-run-as-root -n 4 python task2.py time --n_experiments 10
+mpirun --allow-run-as-root -n 4 python task2.py experiments --n_experiments 10
 ```
 
 Вывести график зависимости среднего времени работы программы от количества процессов:

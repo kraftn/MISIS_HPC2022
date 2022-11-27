@@ -190,7 +190,7 @@ class CellularAutomaton:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('mode', choices=['image', 'time', 'plot'])
+    parser.add_argument('mode', choices=['image', 'experiments', 'plot'])
     parser.add_argument('--automaton_rule', required=False, type=int, default=110)
     parser.add_argument('--periodic', required=False, action='store_true')
     parser.add_argument('--random', required=False, action='store_true')
@@ -206,7 +206,7 @@ if __name__ == '__main__':
             automaton.show_evolution_image(n_times, initial_state=initial_state)
         else:
             automaton.show_evolution_image(n_times, n_cells=n_cells)
-    elif args.mode == 'time':
+    elif args.mode == 'experiments':
         automaton = CellularAutomaton()
         automaton.conduct_experiments(args.n_experiments)
     elif args.mode == 'plot':
